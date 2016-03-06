@@ -2,6 +2,12 @@
 
 var express = require('express');
 var app = express();
+var _ = require('lodash');
+
+
+
+// Endpoints
+app.use('/projects', require('./routes/project'));
 
 
 // Middleware
