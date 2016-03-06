@@ -9,6 +9,7 @@
     <!-- build:css(client/temp) css/moose.min.css -->
     <link rel="stylesheet" href="common/sass/moose.css">
     <link rel="stylesheet" href="dashboard/dashboard.css">
+    <link rel="stylesheet" href="project/project.css">
     <!-- endbuild -->
 
     <!-- build:css css/vendor.min.css -->
@@ -18,7 +19,7 @@
 
   </head>
 
-  <body>
+  <body ng-cloak>
 
     <div ng-controller="MainCtrl as mainCtrl">
 
@@ -32,12 +33,21 @@
     <!-- endbuild -->
 
 		<!-- build:js(client/temp) js/moose.min.js -->
-    <script src="main/main.module.js"></script>
-    <script src="main/main.ctrl.js"></script>
-
+		<!-- Modules -->
+    <script src="data/data.module.js"></script>
     <script src="dashboard/dashboard.module.js"></script>
-    <script src="dashboard/dashboard.ctrl.js"></script>
+    <script src="main/main.module.js"></script>
+    <script src="project/project.module.js"></script>
 
+    <!-- Services -->
+    <script src="data/project.srv.js"></script>
+
+    <!-- Controllers -->
+    <script src="dashboard/dashboard.ctrl.js"></script>
+    <script src="main/main.ctrl.js"></script>
+    <script src="project/project.ctrl.js"></script>
+
+    <!-- App -->
     <script src="app.js"></script>
     <!-- endbuild -->
 
