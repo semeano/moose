@@ -1,0 +1,14 @@
+{
+  "name": "moose",
+  "description": "Time tracking app",
+  "main": "",
+  "authors": [
+    "Pedro Semeano"
+  ],
+  "license": "MIT",
+  "private": true,
+  "appPath": "client/app",
+  "dependencies": {
+    "angular": "^1.5.0"
+  }
+}

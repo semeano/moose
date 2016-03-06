@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html ng-app="moose">
+
+  <head>
+
+    <title>Moose</title>
+
+    <!-- build:css css/moose.min.css -->
+    <link rel="stylesheet" href="common/sass/moose.css">
+    <!-- endbuild -->
+
+    <!-- build:css css/vendor.min.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+  </head>
+
+  <body>
+
+    <div class="app" ng-controller="MainCtrl as mainCtrl">
+    	{{ appName }}
+    </div>
+
+    <!-- build:js js/vendor.min.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+		<!-- build:js js/moose.min.js -->
+    <script src="main/main.module.js"></script>
+    <script src="main/main.ctrl.js"></script>
+
+    <script src="app.js"></script>
+    <!-- endbuild -->
+
+  </body>
+
+</html>
