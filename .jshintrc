@@ -1,0 +1,15 @@
+{
+	"curly": true,
+	"eqeqeq": true,
+	"latedef": false,
+	"nonbsp": true,
+	"strict": true,
+	"undef": true,
+	"unused": true,
+
+	"node": true,
+	"globals": {
+		"angular": false,
+		"$": false
+	}
+}
