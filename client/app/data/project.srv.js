@@ -4,7 +4,7 @@
 
 	angular.module('moose.data')
 
-		.constant('API_PROJECTS', 'http://jsonplaceholder.typicode.com/albums/:album')
+		.constant('API_PROJECTS', '/projects/:id')
 
 		.factory('ProjectSrv', ProjectSrv);
 
@@ -18,7 +18,7 @@
 		// Get project
 		function get(id, success, failure) {
 			if (angular.isDefined(id)) {
-				return $resource(API_PROJECTS, { project: '@project' }).get({ album: id }, null, success, failure);
+				return $resource(API_PROJECTS, { project: '@project' }).get({ id: id }, null, success, failure);
 			}
 			else {
 				return $resource(API_PROJECTS, { project: '@project' }).query(success, failure);

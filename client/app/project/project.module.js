@@ -7,7 +7,7 @@
 		.config(DashboardModule);
 
 
-	function DashboardModule($stateProvider, $urlRouterProvider) {
+	function DashboardModule($stateProvider) {
 
 		$stateProvider
 

@@ -8,6 +8,7 @@ var _ = require('lodash');
 
 // Dummy data
 var projects = [{ id: '1', name: 'The one' },
+								{ id: '2', name: 'da number tu' },
 								{ id: 'asd', name: 'asd' }];
 
 router.route('/:id')
