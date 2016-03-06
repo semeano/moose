@@ -3,18 +3,21 @@
 var express = require('express');
 var router = express.Router();
 var _ = require('lodash');
+var cors = require('cors');
 
 
 
 // Dummy data
-var projects = [{ id: '1', name: 'The one' },
-								{ id: '2', name: 'da number tu' },
-								{ id: 'asd', name: 'asd' }];
+var projects = [{ slug: '1', name: 'The one', description: 'ksjdfksjd' },
+								{ slug: '2', name: 'da number tu', description: '000000' },
+								{ slug: 'asd', name: 'asd', description: 'qweqqewqwe' }];
 
-router.route('/:id')
+router.route('/:slug')
+
+	.all(cors())
 
 	.get(function (req, res) {
-		var project = _.find(projects, function (p) { return p.id === req.params.id; });
+		var project = _.find(projects, function (p) { return p.slug === req.params.slug; });
 		if (project) {
 			res.json(project);
 		}

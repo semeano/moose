@@ -31,6 +31,7 @@
     "wiredep": "^3.0.0"
   },
   "dependencies": {
+    "cors": "^2.7.1",
     "express": "^4.13.4",
     "lodash": "^4.6.1"
   }

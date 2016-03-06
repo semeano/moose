@@ -12,7 +12,7 @@
 		$stateProvider
 
 			.state('project', {
-	      url: '/{id}',
+	      url: '/{slug}',
 	      templateUrl: 'project/project.html',
 	      controller: 'ProjectCtrl as projectCtrl'
 	    });

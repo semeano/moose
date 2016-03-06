@@ -4,7 +4,7 @@
 
 	angular.module('moose.data')
 
-		.constant('API_PROJECTS', '/projects/:id')
+		.constant('API_PROJECTS', 'http://localhost:8000/projects/:slug')
 
 		.factory('ProjectSrv', ProjectSrv);
 
@@ -16,12 +16,12 @@
 		///
 
 		// Get project
-		function get(id, success, failure) {
-			if (angular.isDefined(id)) {
-				return $resource(API_PROJECTS, { project: '@project' }).get({ id: id }, null, success, failure);
+		function get(slug, success, failure) {
+			if (angular.isDefined(slug)) {
+				return $resource(API_PROJECTS, { project: '@project' }).get({ slug: slug }, null, success, failure);
 			}
 			else {
-				return $resource(API_PROJECTS, { project: '@project' }).query(success, failure);
+				failure('Invalid slug');
 			}
 		}
 

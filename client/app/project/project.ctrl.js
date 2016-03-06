@@ -9,17 +9,17 @@
 	function ProjectCtrl($scope, $stateParams, ProjectSrv) {
 
 		function init() {
-			ProjectSrv.get($stateParams.id, success, failure);
+			ProjectSrv.get($stateParams.slug, success, failure);
 		}
 
 		///
 
 		function success(data) {
-			$scope.projects = data;
+			$scope.project = data;
 		}
 
 		function failure(err) {
-			$scope.projects = err.statusText;
+			$scope.project = err.statusText;
 		}
 
 		init();

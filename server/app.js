@@ -9,7 +9,7 @@ var app = express();
 app.use('/projects', require('./routes/project'));
 
 
-// Middleware
+// Middleware (static files)
 app.use(express.static(__dirname + '/../client/dist'));
 
 
