@@ -6,7 +6,7 @@
 
     <title>Moose</title>
 
-    <!-- build:css css/moose.min.css -->
+    <!-- build:css(client/temp) css/moose.min.css -->
     <link rel="stylesheet" href="common/sass/moose.css">
     <!-- endbuild -->
 
@@ -23,12 +23,12 @@
     	{{ appName }}
     </div>
 
-    <!-- build:js js/vendor.min.js -->
+    <!-- build:js(./) js/vendor.min.js -->
     <!-- bower:js -->
     <!-- endbower -->
     <!-- endbuild -->
 
-		<!-- build:js js/moose.min.js -->
+		<!-- build:js(client/temp) js/moose.min.js -->
     <script src="main/main.module.js"></script>
     <script src="main/main.ctrl.js"></script>
 
