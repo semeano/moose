@@ -7,15 +7,11 @@
 			// Angular
 
 			// Vendor
-			//   'ui.router',
-			//   'firebase',
-			//   'ng-dropdown-multiselect',
-			//   'ng-dropdown-multiselect-pair',
-			//   'angucomplete-alt',
-			//   'toaster',
+			'ui.router',
 
 			// Modules
-			'moose.main'
+			'moose.main',
+			'moose.dashboard'
 		];
 
 	angular.module('moose', dependencies);

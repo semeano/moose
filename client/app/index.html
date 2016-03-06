@@ -8,6 +8,7 @@
 
     <!-- build:css(client/temp) css/moose.min.css -->
     <link rel="stylesheet" href="common/sass/moose.css">
+    <link rel="stylesheet" href="dashboard/dashboard.css">
     <!-- endbuild -->
 
     <!-- build:css css/vendor.min.css -->
@@ -19,8 +20,10 @@
 
   <body>
 
-    <div class="app" ng-controller="MainCtrl as mainCtrl">
-    	{{ appName }}
+    <div ng-controller="MainCtrl as mainCtrl">
+
+	    <div ui-view class="app"></div>
+
     </div>
 
     <!-- build:js(./) js/vendor.min.js -->
@@ -31,6 +34,9 @@
 		<!-- build:js(client/temp) js/moose.min.js -->
     <script src="main/main.module.js"></script>
     <script src="main/main.ctrl.js"></script>
+
+    <script src="dashboard/dashboard.module.js"></script>
+    <script src="dashboard/dashboard.ctrl.js"></script>
 
     <script src="app.js"></script>
     <!-- endbuild -->

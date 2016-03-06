@@ -9,6 +9,7 @@
   "private": true,
   "appPath": "client/app",
   "dependencies": {
-    "angular": "^1.5.0"
+    "angular": "^1.5.0",
+    "angular-ui-router": "^0.2.18"
   }
 }
