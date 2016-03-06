@@ -4,7 +4,25 @@
 
   <head>
 
+  	<meta charset="utf-8">
+
     <title>Moose</title>
+
+    <meta name="description" content="Time tracking app">
+
+    <!-- Don't forget to set your site up: https://google.com/webmasters -->
+		<meta name="google-site-verification" content="" />
+
+		<!--  Mobile Viewport
+		http://j.mp/mobileviewport & http://davidbcalhoun.com/2010/viewport-metatag
+		device-width : Occupy full width of the screen in its current orientation
+		initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+		maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width (wrong for most sites)
+		-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Use Iconifyer to generate all the favicons and touch icons you need: http://iconifier.net -->
+		<link rel="shortcut icon" href="favicon.ico" />
 
     <!-- build:css(client/temp) css/moose.min.css -->
     <link rel="stylesheet" href="common/sass/moose.css">
@@ -12,7 +30,7 @@
     <link rel="stylesheet" href="project/project.css">
     <!-- endbuild -->
 
-    <!-- build:css css/vendor.min.css -->
+    <!-- build:css(./) css/vendor.min.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
