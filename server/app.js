@@ -2,7 +2,11 @@
 
 var express = require('express');
 var app = express();
+var mongo = require('./mongo/mongo');
 
+
+// DB connection
+mongo.connect();
 
 
 // Endpoints
