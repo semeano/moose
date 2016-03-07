@@ -1,15 +1,16 @@
+'use strict';
+
 var gulp = require('gulp'),
 		del = require('del'),
 		sass = require('gulp-sass'),
 		minifycss = require('gulp-clean-css'),
-		concatcss = require('gulp-concat-css'),
 		jshint = require('gulp-jshint'),
 		uglify = require('gulp-uglify'),
 		ngannotate = require('gulp-ng-annotate'),
 		useref = require('gulp-useref'),
 		gulpif = require('gulp-if'),
 		wiredep = require('wiredep').stream,
-		inject = require('gulp-inject'),
+		replace = require('gulp-replace'),
 		htmlmin = require('gulp-htmlmin'),
 		connect = require('gulp-connect');
 
@@ -29,6 +30,7 @@ gulp.task('build', ['clear', 'html:build'], function () {
 gulp.task('serve', ['clear:temp', 'sass', 'js', 'html:serve', 'watch'], function () {
   connect.server({
   	root: 'client/temp',
+  	port: 8000,
   	livereload: true,
   	middleware: function (connect) {
 			return [connect().use('/bower_components', connect.static('bower_components'))];
@@ -65,6 +67,11 @@ gulp.task('sass', function () {
 
 
 // JS
+gulp.task('js:build', ['js'], function () {
+	return gulp.src('client/temp/**/*.js')
+		.pipe(replace('http://localhost:7000', ''))
+		.pipe(gulp.dest('client/temp'));
+});
 gulp.task('js', ['ngannotate'], function () {
 	return gulp.src('client/temp/**/*.js')
 		.pipe(jshint())
@@ -84,7 +91,7 @@ gulp.task('html:build', ['html:useref'], function () {
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('client/dist'));
 });
-gulp.task('html:useref', ['sass', 'js', 'html:serve'], function () {
+gulp.task('html:useref', ['sass', 'js:build', 'html:serve'], function () {
 	return gulp.src(['client/temp/**/*.html'])
 		.pipe(useref())
 		.pipe(gulpif('*.js', uglify()))

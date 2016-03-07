@@ -14,6 +14,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 
 // Server
-app.listen(8000, function () {
-	console.log('Server listening on port 8000');
+const PORT = 7000;
+app.listen(PORT, function () {
+	console.log('Server listening on port %d', PORT);
 });

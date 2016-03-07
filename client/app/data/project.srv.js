@@ -4,7 +4,7 @@
 
 	angular.module('moose.data')
 
-		.constant('API_PROJECTS', 'http://localhost:8000/projects/:slug')
+		.constant('API_PROJECTS', 'http://localhost:7000/projects/:slug')
 
 		.factory('ProjectSrv', ProjectSrv);
 
